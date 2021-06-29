@@ -1,6 +1,6 @@
 class Car
-{constructor(){}
-    frontendData(name, year, power, maxSpeed)
+{
+    constructor(name, year, power, maxSpeed)
     {
         this.name = name;
         this.year = year;
@@ -11,6 +11,7 @@ class Car
     behaviourOffRoad = [];
     behaviourStreets = [];
     modificationsDateandPlace = [];
+    color = [];
     addModel(models)
     {
         if (typeof models == "string")
@@ -49,12 +50,21 @@ class Car
             console.log("invalid model type");
         }
     }
+    addColor(col)
+    {
+        this.addColor.push(col);
+    }
+    removeColor()
+    {
+        this.removeColor.pop();
+    }
     showData(){
         console.log("name ->", this.name);
-        console.log("age ->", this.age);
+        console.log("year ->", this.year);
         console.log("power ->", this.power);
         console.log("maxSpeed ->", this.maxSpeed);
         console.log("model ->", this.model);
+        console.log("color ->", this.color);
         console.log("behaviourOffRoad ->", this.behaviourOffRoad);
         console.log("behaviourStreets ->", this.behaviourStreets);
         console.log("modificationsDateandPlace", this.modificationsDateandPlace);
