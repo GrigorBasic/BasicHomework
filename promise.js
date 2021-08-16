@@ -16,6 +16,8 @@ foo(10).then(data => {
 }).then(data => {
     return data + 10;
 }).then(data => {
+    return data + 10;
+}).then(data => {
     console.log(data); 
 }).catch(error => {
     console.log(error);
